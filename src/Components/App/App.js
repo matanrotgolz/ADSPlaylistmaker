@@ -9,7 +9,8 @@ export default class App extends React.Component{
     super(props);
     this.state = {searchResults :[],
     PlaylistName:'My Playlist',
-    PlaylistTracks:[]
+    PlaylistTracks:[],
+    audioSrc : 'https://www.youtube.com/watch?v=LYI3eegIJlI'
   };
   this.addTrack = this.addTrack.bind(this);
   this.removeTrack =  this.removeTrack.bind(this);
@@ -47,7 +48,7 @@ export default class App extends React.Component{
       console.log(term);
       Spotify.search(term).then(searchResults =>{
       this.setState({searchResults: searchResults});
-      console.log(searchResults);
+      console.log(this.state.searchResults);
     })   
   }
   render() {
@@ -57,7 +58,7 @@ export default class App extends React.Component{
             <div className="App">
               <SearchBar onSearch={this.search}/>
               <div className="App-playlist">
-                <SearchResults searchResults = {this.state.searchResults} onAdd = {this.addTrack}/>
+                <SearchResults searchResults = {this.state.searchResults} onAdd = {this.addTrack}  />
                 <Playlist PlaylistName = {this.state.PlaylistName} playlistTrack = {this.state.PlaylistTracks}  onRemove = {this.removeTrack} onNameChange = {this.updatePlaylistName}
                 onSave = {this.savePlaylist}/>
               </div>

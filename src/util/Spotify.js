@@ -4,7 +4,7 @@ let accessToken;
 const Spotify = {
     getAccessToken(){
         if(accessToken){
-            console.log('access token has been retrieved' , accessToken);
+            /*console.log('access token has been retrieved' , accessToken);*/
             return accessToken;
         }
         // check for access token match 
@@ -27,7 +27,7 @@ const Spotify = {
         }
     },
     search(term) {
-        console.log('search method has been activated');
+        /*console.log('search method has been activated');*/
         const accessToken = Spotify.getAccessToken();
         /*if(accessToken){
             console.log('access token has been activated');
@@ -44,14 +44,19 @@ const Spotify = {
             if(!jsonResponse.tracks){
                 return[];
             }
+            /*console.log(jsonResponse.tracks.items.map(item =>({
+                preview:item.preview_url
+            })))*/
+
             return jsonResponse.tracks.items.map(track => ({
                 id:track.id,
                 name:track.name,
                 artist:term,
                 album: track.album.name, 
-                uri: track.uri
+                uri: track.uri,
+                preview: track.preview_url === null ? 'Preview is not available' : track.preview_url
         }));
-    });
+    })
     },
     savePlaList(name,tracURis){
         if(!name || !tracURis.length ){
