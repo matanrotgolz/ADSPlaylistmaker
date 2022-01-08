@@ -1,3 +1,6 @@
+.ResultsHeadline{
+  border-bottom: 1px solid #6f6f6f;
+}
 .SearchResults {
     width: 50%;
     height: 950px;

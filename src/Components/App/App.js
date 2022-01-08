@@ -20,6 +20,7 @@ export default class App extends React.Component{
 }
   addTrack(track){
     let tracks = this.state.PlaylistTracks;
+    console.log(this.state.PlaylistTracks);
     if(tracks.find(savedTrack => savedTrack.id === track.id)){
       return;
     }
