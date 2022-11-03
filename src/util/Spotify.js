@@ -1,12 +1,11 @@
 const ClientId ='cdd7f8211ae3422181ead89cf4e1782d';
-const redirectUri = "https://matanrotgolz.github.io/ADSPlaylistmaker";
+const redirectUri = 'https://matanrotgolz.github.io/ADSPlaylistmaker/';
 let accessToken;
 const Spotify = {
     getAccessToken(){
         if(accessToken){
             return accessToken;
         }
-        // check for access token match 
         const accessTokenMatch =window.location.href.match(/access_token=([^&]*)/);
         const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
         if(accessTokenMatch && expiresInMatch) {
