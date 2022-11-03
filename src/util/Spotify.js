@@ -4,7 +4,6 @@ let accessToken;
 const Spotify = {
     getAccessToken(){
         if(accessToken){
-            /*console.log('access token has been retrieved' , accessToken);*/
             return accessToken;
         }
         // check for access token match 
@@ -27,14 +26,7 @@ const Spotify = {
         }
     },
     search(term) {
-        /*console.log('search method has been activated');*/
         const accessToken = Spotify.getAccessToken();
-        /*if(accessToken){
-            console.log('access token has been activated');
-        }
-        else{
-            console.log('access token has not been activated');
-        }*/
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,{
             headers:{
             Authorization: `Bearer ${accessToken}`}
@@ -44,9 +36,6 @@ const Spotify = {
             if(!jsonResponse.tracks){
                 return[];
             }
-            /*console.log(jsonResponse.tracks.items.map(item =>({
-                preview:item.preview_url
-            })))*/
 
             return jsonResponse.tracks.items.map(track => ({
                 id:track.id,
