@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ADSPlaylistmaker/static/css/main.04eb346f.css",
-    "main.js": "/ADSPlaylistmaker/static/js/main.5ee4a56b.js",
+    "main.js": "/ADSPlaylistmaker/static/js/main.eaf0f3cd.js",
     "static/js/787.68a5b273.chunk.js": "/ADSPlaylistmaker/static/js/787.68a5b273.chunk.js",
     "static/media/background_photo.jpg": "/ADSPlaylistmaker/static/media/background_photo.f6d02ce65031d796a496.jpg",
     "index.html": "/ADSPlaylistmaker/index.html",
     "main.04eb346f.css.map": "/ADSPlaylistmaker/static/css/main.04eb346f.css.map",
-    "main.5ee4a56b.js.map": "/ADSPlaylistmaker/static/js/main.5ee4a56b.js.map",
+    "main.eaf0f3cd.js.map": "/ADSPlaylistmaker/static/js/main.eaf0f3cd.js.map",
     "787.68a5b273.chunk.js.map": "/ADSPlaylistmaker/static/js/787.68a5b273.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04eb346f.css",
-    "static/js/main.5ee4a56b.js"
+    "static/js/main.eaf0f3cd.js"
   ]
 }
