@@ -1,5 +1,5 @@
 const ClientId ='cdd7f8211ae3422181ead89cf4e1782d';
-const redirectUri = ' https://matanrotgolz.github.io/ADSPlaylistmaker/';
+const redirectUri = 'https://matanrotgolz.github.io/ADSPlaylistmaker/';
  /*'http://localhost:3000'*/ 
 let accessToken;
 const Spotify = {
@@ -20,7 +20,7 @@ const Spotify = {
         }
         else{
             console.log('error after the first statement');
-            const accessUrl =`https://accounts.spotify.com/authorize?client_id=${ClientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`
+            const accessUrl =`https://accounts.spotify.com/authorize?client_id=${ClientId}&response_type=token&scope=playlist-modify-public&redirect_uri=https://matanrotgolz.github.io/ADSPlaylistmaker/`
             window.location = accessUrl;
             console.log('error in first statement at Spotify.js')
         }
