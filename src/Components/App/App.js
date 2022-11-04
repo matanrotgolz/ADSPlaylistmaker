@@ -69,9 +69,5 @@ export default class App extends React.Component{
   }
 }
 
-/*      Spotify.search(term).then(searchResults =>{
-      this.setState({searchResults: searchResults});
-      console.log(searchResults);
-    })   
-{name:'name1' , artist:'artist1',album:'album1',id:1},{name:'name2' , artist:'artist2',album:'album2',id:2}*/
+
 
